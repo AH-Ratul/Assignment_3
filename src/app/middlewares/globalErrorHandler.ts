@@ -5,16 +5,9 @@ import { handleDuplicateField } from "../errorHandlers/handelDuplicateError";
 import { handleCastError } from "../errorHandlers/handleCastError";
 import { handleValidationError } from "../errorHandlers/handleValidationError";
 
-export const globalErrorHandler: ErrorRequestHandler = (
-  err: any,
-  req,
-  res,
-  next
-) => {
+export const globalErrorHandler: ErrorRequestHandler = (err, __, res, ___) => {
   let statusCode = err.statusCode || 500;
   let message = err?.message || "Something Went Wrong!!";
-
-  console.log("errrr", err)
 
   if (err instanceof AppError) {
     (statusCode = err?.statusCode), (message = err?.message);
