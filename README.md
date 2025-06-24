@@ -151,8 +151,8 @@ https://my-library-henna-seven.vercel.app/
 
 ### 2. Get ALl Books
 
-  **EndPoints:**  ``` /api/books/ ```
-  **Query Parameters:**
+  - **EndPoints:**  ``` /api/books/ ```
+  - **Query Parameters:**
       - ```Filter```: Filter books by genre
       - ```Sort```: Define the sorting values. Accepts values ```asc``` or ```desc```
       - ```Limit```: Define the limit number
