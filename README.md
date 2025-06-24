@@ -151,7 +151,7 @@ https://my-library-henna-seven.vercel.app/
 
 ### 2. Get ALl Books
 
-  - **EndPoints:**  ``` /api/books/ ```
+  - **EndPoint:**  ``` /api/books/ ```
     
   - **Query Parameters:**
       - ```Filter```: Filter books by genre
@@ -170,6 +170,35 @@ https://my-library-henna-seven.vercel.app/
     "message": "Book retrieve successfully",
     "data": [ array of objects ]
   ```
+
+### 3. Get Book By Id
+
+- **EndPoint:** ``` /api/books/:bookId ```
+
+**Response:** Success
+
+  ```
+    "title": "string",
+    "author": "string",
+    "genre": "string",
+    "isbn": "string",
+    "description": "string",
+    "copies": number,
+    "available": boolean,
+    "_id": "string",
+    "createdAt": "date",
+    "updatedAt": "date",
+  ```
+
+**Response:** Failure
+  ```
+    "success": false,
+    "statusCode": 400,
+    "message": "Invalid _id: 685a3619037f71227ecfb35",
+    "err": { error object }
+  ```
+
+
 
 
 
