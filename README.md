@@ -120,22 +120,22 @@ https://my-library-henna-seven.vercel.app/
     - **Response:** Success
       
       ```
-      {
-        "success": true,
-        "message": "Book Created Successfully",
-        "data": {
-            "title": "string",
-            "author": "string",
-            "genre": "string",
-            "isbn": "string",
-            "description": "string",
-            "copies": number,
-            "available": boolean,
-            "_id": "string",
-            "createdAt": "date",
-            "updatedAt": "date",
+        {
+          "success": true,
+          "message": "Book Created Successfully",
+          "data": {
+              "title": "string",
+              "author": "string",
+              "genre": "string",
+              "isbn": "string",
+              "description": "string",
+              "copies": number,
+              "available": boolean,
+              "_id": "string",
+              "createdAt": "date",
+              "updatedAt": "date",
+            }
           }
-        }
       ```
 
       - **Response:** Failure
@@ -155,6 +155,7 @@ https://my-library-henna-seven.vercel.app/
     
   - **Query Parameters:**
       - ```Filter```: Filter books by genre
+      - ```SortBy```: Sort by creation date
       - ```Sort```: Define the sorting values. Accepts values ```asc``` or ```desc```
       - ```Limit```: Define the limit number
     
@@ -162,8 +163,14 @@ https://my-library-henna-seven.vercel.app/
   
   ```/api/books?filter=NON-FICTION&sortBy=createdAt&sort=desc&limit=5```
      
-      
-      
+  **Response:** Success
+
+  ```
+    "success": true,
+    "message": "Book retrieve successfully",
+    "data": [ array of objects ]
+  ```
+
 
 
 
