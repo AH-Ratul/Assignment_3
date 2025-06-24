@@ -101,7 +101,20 @@ https://my-library-henna-seven.vercel.app/
 ### Book Management
 
 1. **Create Book**
-   - Endpoints: ``` /api/books/ ```
+   - **Endpoints:** ``` /api/books/ ```
+   - **Description:** Create book by providing details
+   - **Request Body:**
+     ```
+     {
+     "title": "The Theory of Everything",
+      "author": "Stephen Hawking",
+      "genre": "SCIENCE",
+      "isbn": "9780553380163",
+      "description": "An overview of cosmology and black holes.",
+      "copies": 5,
+      "available": true
+      }
+    - **Response:** Success
 
 
 
