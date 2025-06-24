@@ -275,7 +275,7 @@ https://my-library-henna-seven.vercel.app/
 ### 1. Borrow a Book
 
   - **Method:** ```POST```
-  - **EndPoint:** ```/api/borrow/
+  - **EndPoint:** ```/api/borrow/```
   - **Description:** Create a borrow record for a specific book and quantity.
   - **Request Body:**
     
