@@ -166,9 +166,11 @@ https://my-library-henna-seven.vercel.app/
   **Response:** Success
 
   ```
-    "success": true,
-    "message": "Book retrieve successfully",
-    "data": [ array of objects ]
+    {
+      "success": true,
+      "message": "Book retrieve successfully",
+      "data": [ array of objects ]
+      }
   ```
 
 ### 3. Get Book By Id
@@ -178,24 +180,28 @@ https://my-library-henna-seven.vercel.app/
 **Response:** Success
 
   ```
-    "title": "string",
-    "author": "string",
-    "genre": "string",
-    "isbn": "string",
-    "description": "string",
-    "copies": number,
-    "available": boolean,
-    "_id": "string",
-    "createdAt": "date",
-    "updatedAt": "date",
+    {
+      "title": "string",
+      "author": "string",
+      "genre": "string",
+      "isbn": "string",
+      "description": "string",
+      "copies": number,
+      "available": boolean,
+      "_id": "string",
+      "createdAt": "date",
+      "updatedAt": "date",
+    }
   ```
 
 **Response:** Failure
   ```
-    "success": false,
-    "statusCode": 400,
-    "message": "Invalid _id: 685a3619037f71227ecfb35",
-    "err": { error object }
+    {
+      "success": false,
+      "statusCode": 400,
+      "message": "Invalid _id: 685a3619037f71227ecfb35",
+      "err": { error object }
+    }
   ```
 
 ### 3. Update Book
@@ -232,15 +238,15 @@ https://my-library-henna-seven.vercel.app/
       }
     ```
 
-**Response:** Failure
-  ```
-    {
-      "success": false,
-      "statusCode": 400,
-      "message": "Invalid _id: 685a3619037f71227ecfb35",
-      "err": { error object }
-    }
-  ```
+  **Response:** Failure
+    ```
+      {
+        "success": false,
+        "statusCode": 400,
+        "message": "Invalid _id: 685a3619037f71227ecfb35",
+        "err": { error object }
+      }
+    ```
 
 
 
