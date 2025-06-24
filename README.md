@@ -100,10 +100,10 @@ https://my-library-henna-seven.vercel.app/
 
 ### Book Management
 
-1. **Create Book**
-   - **Endpoints:** ``` /api/books/ ```
-   - **Description:** Create book by providing details
-   - **Request Body:**
+## 1. Create Book
+  - **Endpoints:** ``` /api/books/ ```
+  - **Description:** Create book by providing details
+  - **Request Body:**
      
      ```
      {
@@ -117,6 +117,7 @@ https://my-library-henna-seven.vercel.app/
       }
      
     - **Response:** Success
+      
       ```
       {
         "success": true,
@@ -134,7 +135,23 @@ https://my-library-henna-seven.vercel.app/
             "updatedAt": "date",
           }
         }
-  
+      ```
+
+      - **Response:** Failure
+        ```
+        {
+          "success": false,
+          "statusCode": 400,
+          "message": "Validation error",
+          "err": { object }
+        }
+
+---
+
+## 2. Get ALl Books
+   **EndPoints:**  ``` /api/books/ ```
+     
+      
       
 
 
