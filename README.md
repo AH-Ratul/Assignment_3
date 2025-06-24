@@ -39,9 +39,9 @@ It allows managing books and borrow records with proper validation, error handli
 
 ## 🛠 Technology Used
 
--**Backend**: Node js, Express js
--**Database**: MongoDB, Mongoose
--**Others**: Typescript for type safety and better developer experience
+- **Backend**: Node js, Express js
+- **Database**: MongoDB, Mongoose
+- **Others**: Typescript for type safety and better developer experience
 
 ---
 
@@ -84,6 +84,8 @@ Follow these steps to setup the application on your local machine:
 
    ```bash
    http://localhost:5100/api
+
+---
 
 
 
