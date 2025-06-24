@@ -96,6 +96,13 @@ https://my-library-henna-seven.vercel.app/
 ```
 ---
 
+**EndPoints**
+
+### Book Management
+
+1. **Create Book**
+   - Endpoints: <mark>/api/books/</mark>
+
 
 
 
