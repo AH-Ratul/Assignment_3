@@ -102,6 +102,7 @@ https://my-library-henna-seven.vercel.app/
 
 ### 1. Create Book
 
+  - **Method:** ```POST```
   - **Endpoint:** ``` /api/books/ ```
   - **Description:** Create book by providing details
   - **Request Body:**
@@ -151,6 +152,7 @@ https://my-library-henna-seven.vercel.app/
 
 ### 2. Get ALl Books
 
+  - **Method:** ```GET```
   - **EndPoint:**  ``` /api/books/ ```
     
   - **Query Parameters:**
@@ -175,47 +177,48 @@ https://my-library-henna-seven.vercel.app/
 
 ### 3. Get Book By Id
 
+- **Method:** ```GET```
 - **EndPoint:** ``` /api/books/:bookId ```
 
-**Response:** Success
+  **Response:** Success
+  
+    ```
+      {
+        "title": "string",
+        "author": "string",
+        "genre": "string",
+        "isbn": "string",
+        "description": "string",
+        "copies": number,
+        "available": boolean,
+        "_id": "string",
+        "createdAt": "date",
+        "updatedAt": "date",
+      }
+    ```
 
-  ```
-    {
-      "title": "string",
-      "author": "string",
-      "genre": "string",
-      "isbn": "string",
-      "description": "string",
-      "copies": number,
-      "available": boolean,
-      "_id": "string",
-      "createdAt": "date",
-      "updatedAt": "date",
-    }
-  ```
+    **Response:** Failure
+    ```
+      {
+        "success": false,
+        "statusCode": 400,
+        "message": "Invalid _id: 685a3619037f71227ecfb35",
+        "err": { error object }
+      }
+    ```
 
-**Response:** Failure
-  ```
-    {
-      "success": false,
-      "statusCode": 400,
-      "message": "Invalid _id: 685a3619037f71227ecfb35",
-      "err": { error object }
-    }
-  ```
-
-### 3. Update Book
+### 4. Update Book
 
 - **Method:** ```PATCH```
 - **EndPoint:** ``` /api/books/:bookId ```
 - **Description:** Updates an existing book's information by its ID.
 - **Request Body:**
   
-  ```
-  {
-    "copies": 19
-  }
-  ```
+    ```
+    {
+      "copies": 19
+    }
+    ```
 
   **Response:** Success
 
@@ -239,6 +242,7 @@ https://my-library-henna-seven.vercel.app/
     ```
 
   **Response:** Failure
+  
     ```
       {
         "success": false,
@@ -248,6 +252,97 @@ https://my-library-henna-seven.vercel.app/
       }
     ```
 
+### 5. Delete A Book
 
+  - **Method:** ```DELETE```
+  - **EndPoint:** ```/api/books/:bookId```
+  - **Description:** Delete an existing book by its ID.
 
+  **Response:** Success
+  
+  ```
+    {
+      "success": true,
+      "message": "Book deleted successfully",
+      "data": null
+    }
+  ```
 
+---
+
+## Borrow
+
+### 1. Borrow a Book
+
+  - **Method:** ```POST```
+  - **EndPoint:** ```/api/borrow/
+  - **Description:** Create a borrow record for a specific book and quantity.
+  - **Request Body:**
+    
+    ```
+      {
+        "book": "60b9f4f6e1d5a84b1c8e4b7a",
+        "quantity": 2,
+        "dueDate": "2025-07-15"
+      }
+    ```
+
+    **Response:** Success
+
+      ```
+        {
+          "success": true,
+          "message": "Book borrowed successfully",
+          "data": {
+            "_id": "665fa3e5e0c4fa6eb070c899",
+            "book": "60b9f4f6e1d5a84b1c8e4b7a",
+            "quantity": 2,
+            "dueDate": "2025-07-15T00:00:00.000Z",
+            "createdAt": "2025-06-21T12:34:56.789Z"
+          }
+        }
+      ```
+
+    **Response:** Failure
+
+    ```
+        {
+          "success": false,
+          "statusCode": 400,
+          "message": "ValidationError",
+          "err": { object }
+        }
+
+### 2. Borrow Summary
+
+  - **Method:** ```GET```
+  - **EndPoint:** ```/api/borrow/```
+  - **Description:** Returns a summary of all borrowed books including total quantity borrowed and basic book details (title and ISBN).
+
+  **Response:** Success
+
+  ```
+      {
+        "success": true,
+        "message": "Borrowed books summary retrieved successfully",
+        "data": [
+          {
+            "book": {
+              "title": "The Theory of Everything",
+              "isbn": "9780553380163"
+            },
+            "totalQuantity": 5
+          },
+          {
+            "book": {
+              "title": "1984",
+              "isbn": "9780451524935"
+            },
+            "totalQuantity": 3
+          }
+        ]
+      }
+```
+
+    
+    
