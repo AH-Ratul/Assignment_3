@@ -104,17 +104,38 @@ https://my-library-henna-seven.vercel.app/
    - **Endpoints:** ``` /api/books/ ```
    - **Description:** Create book by providing details
    - **Request Body:**
+     
      ```
      {
-     "title": "The Theory of Everything",
-      "author": "Stephen Hawking",
-      "genre": "SCIENCE",
-      "isbn": "9780553380163",
-      "description": "An overview of cosmology and black holes.",
-      "copies": 5,
-      "available": true
+       "title": "The Theory of Everything",
+        "author": "Stephen Hawking",
+        "genre": "SCIENCE",
+        "isbn": "9780553380163",
+        "description": "An overview of cosmology and black holes.",
+        "copies": 5,
+        "available": true
       }
+     
     - **Response:** Success
+      ```
+      {
+        "success": true,
+        "message": "Book Created Successfully",
+        "data": {
+            "title": "string",
+            "author": "string",
+            "genre": "string",
+            "isbn": "string",
+            "description": "string",
+            "copies": number,
+            "available": boolean,
+            "_id": "string",
+            "createdAt": "date",
+            "updatedAt": "date",
+          }
+        }
+  
+      
 
 
 
