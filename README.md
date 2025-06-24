@@ -100,7 +100,8 @@ https://my-library-henna-seven.vercel.app/
 
 ## Book Management
 
-## 1. Create Book
+### 1. Create Book
+
   - **Endpoints:** ``` /api/books/ ```
   - **Description:** Create book by providing details
   - **Request Body:**
@@ -148,8 +149,15 @@ https://my-library-henna-seven.vercel.app/
 
 ---
 
-## 2. Get ALl Books
+### 2. Get ALl Books
+
    **EndPoints:**  ``` /api/books/ ```
+   **Query Parameters:**
+      - ```Filter```: Filter books by genre
+      - ```Sort```: Define the sorting values. Accepts values ```asc``` or ```desc```
+      - ```Limit```: Define the limit number
+    **Example Request URL:**
+    ```/api/books?filter=NON-FICTION&sortBy=createdAt&sort=desc&limit=5```
      
       
       
