@@ -87,5 +87,12 @@ Follow these steps to setup the application on your local machine:
 
 ---
 
+## 📋 API Documentation
+
+**BASE URL:**
+
+  ```bash
+  https://my-library-henna-seven.vercel.app/
+
 
 
