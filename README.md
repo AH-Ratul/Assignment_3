@@ -102,7 +102,7 @@ https://my-library-henna-seven.vercel.app/
 
 ### 1. Create Book
 
-  - **Endpoints:** ``` /api/books/ ```
+  - **Endpoint:** ``` /api/books/ ```
   - **Description:** Create book by providing details
   - **Request Body:**
      
@@ -198,8 +198,49 @@ https://my-library-henna-seven.vercel.app/
     "err": { error object }
   ```
 
+### 3. Update Book
 
+- **Method:** ```PATCH```
+- **EndPoint:** ``` /api/books/:bookId ```
+- **Description:** Updates an existing book's information by its ID.
+- **Request Body:**
+  
+  ```
+  {
+    "copies": 19
+  }
+  ```
 
+  **Response:** Success
+
+    ```
+      {
+      "success": true,
+      "message": "Book updated successfully",
+      "data": {
+          "_id": "685a3619037f71227ecfb356",
+          "title": "The Devil in the White City",
+          "author": "Erik Larson",
+          "genre": "HISTORY",
+          "isbn": "9780553380148",
+          "description": "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America.",
+          "copies": 19,
+          "available": true,
+          "createdAt": "2025-06-24T05:22:33.981Z",
+          "updatedAt": "2025-06-24T17:47:00.938Z",
+        }
+      }
+    ```
+
+**Response:** Failure
+  ```
+    {
+      "success": false,
+      "statusCode": 400,
+      "message": "Invalid _id: 685a3619037f71227ecfb35",
+      "err": { error object }
+    }
+  ```
 
 
 
