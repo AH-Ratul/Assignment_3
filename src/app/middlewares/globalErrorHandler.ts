@@ -7,7 +7,7 @@ import { handleValidationError } from "../errorHandlers/handleValidationError";
 
 export const globalErrorHandler: ErrorRequestHandler = (err, __, res, ___) => {
   let statusCode = err.statusCode || 500;
-  let message = err?.message || "Something Went Wrong!!";
+  let message = err?.message || "Something Went Wrong!!!";
 
   if (err instanceof AppError) {
     (statusCode = err?.statusCode), (message = err?.message);
