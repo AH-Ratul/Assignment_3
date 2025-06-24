@@ -37,7 +37,7 @@ const getAllBooks = tryCatch(async (req: Request, res: Response) => {
     .limit(limitNumber);
 
   res.status(200).json({
-    status: true,
+    success: true,
     message: "Book retrieve successfully",
     count: books.length,
     data: books,
@@ -54,7 +54,7 @@ const getBookById = tryCatch(async (req: Request, res: Response) => {
   }
 
   res.status(200).json({
-    status: true,
+    success: true,
     message: "Book retrieved successfully",
     data: book,
   });
@@ -70,7 +70,7 @@ const updateABook = tryCatch(async (req: Request, res: Response) => {
   });
 
   res.status(201).json({
-    status: true,
+    success: true,
     message: "Book updated successfully",
     data: update,
   });
@@ -82,7 +82,7 @@ const deleteABook = tryCatch(async (req: Request, res: Response) => {
   await Book.findByIdAndDelete(bookId);
 
   res.status(200).json({
-    status: true,
+    success: true,
     message: "Book deleted successfully",
     data: null,
   });

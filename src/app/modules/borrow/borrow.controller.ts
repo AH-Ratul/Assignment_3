@@ -60,7 +60,7 @@ const getBorrowSummary = tryCatch(async (req: Request, res: Response) => {
   ]);
 
   res.status(200).json({
-    status: true,
+    success: true,
     message: "Borrowed books summary retrieved successfully",
     data: result,
   });
